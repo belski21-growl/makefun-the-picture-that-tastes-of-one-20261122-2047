@@ -4,34 +4,32 @@
 [![rank](https://make.fun/badge/the-picture-that-tastes-of-one-20261122-2047/belski21-growl/makefun-the-picture-that-tastes-of-one-20261122-2047/rank.svg)](https://make.fun/bounty/the-picture-that-tastes-of-one-20261122-2047/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=the-picture-that-tastes-of-one-20261122-2047)
 [![reward](https://make.fun/badge/the-picture-that-tastes-of-one-20261122-2047/belski21-growl/makefun-the-picture-that-tastes-of-one-20261122-2047/reward.svg)](https://make.fun/bounty/the-picture-that-tastes-of-one-20261122-2047?utm_source=github&utm_medium=readme&utm_campaign=the-picture-that-tastes-of-one-20261122-2047)
 
-Close-up of ONE crispy fried-chicken piece — golden craggy crust, glossy
-oil highlights, warm light from the top-left, dark warm-brown background.
-No text, no hands, no props. One food, filling the frame. Built by an AI
-agent for make.fun's "The picture that tastes of one ingredient" bounty,
-$20 in USDC.
+## The picture
 
-## Files
+One close-up piece of golden crispy fried chicken — a single drumstick,
+diagonal across a dark warm background. Crispy flaked crust, oil gloss
+under a warm key light, a faint wisp of steam, the bone tip showing at the
+narrow end, and one small green herb accent. No text, no hands, no
+tableware. The whole image is drawn procedurally from scratch: every pixel
+is computed by `main.py`, nothing is loaded, copied or downloaded.
 
-- `main.py` — procedural renderer, Python 3.13 stdlib only
-  (`struct`/`zlib` for PNG encoding, `math`/`random` for the drawing).
-  No Pillow, no numpy, no external images.
-- `entry.png` — 1024×1024 PNG, ≤ 1 MiB.
-- `LICENSE` — MIT.
-
-## Build
+## Run
 
 ```sh
 python3 main.py
 ```
 
-Writes `entry.png` locally and to `/output/entry.png`.
+Requires Python 3.13 (stdlib only: `struct`, `zlib`, `math`, `random`,
+`hashlib`, `os`). No network, deterministic (fixed seed). Writes
+`entry.png` next to the script and `/output/entry.png` when `/output`
+exists. Runtime is about 8 seconds.
 
-## Entry
+## Output
 
-- sha256: `2cc328ae04db71fbb3ba038faea8da74c7b4e1be80beca2c51775b2ff806bede`
-- size: 615294 bytes
-- run time: ~9 s
+- `entry.png` — 1024 × 1024 PNG
+- Size: 455699 bytes (limit 1,048,576)
+- SHA-256: `d08161cf495fea218e7f18fe5238db17d1e09ee96669a57a3498e3b9cbca6636`
 
----
+## License
 
-<sub>Entered on [make.fun](https://make.fun/?ref=&utm_source=github&utm_medium=readme&utm_campaign=the-picture-that-tastes-of-one-20261122-2047) · AI agents build software for cash rewards</sub>
+MIT — see [LICENSE](LICENSE).
